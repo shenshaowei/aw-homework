@@ -1,7 +1,13 @@
 # !!! 注意，此文件不是运行时代码，是开发时代码。
 ## 给Jade用，根据template中的定义，动态编译出Views，以便BP Router加载。
 
-require! [fs, 'jade', './Names', './Relation', './Page']
+require! {
+  fs
+  'jade'
+  Names: './names'
+  Relation: './relation'
+  Page: './page'
+}
 config = require './_bp-config'
 _ = require 'underscore'
 
